@@ -1,4 +1,4 @@
-import { Album, AlignStartHorizontal, CircleCheckBig, CircleX, Component, Info, LayoutDashboard, NotepadText, PackageSearch, Redo2, Settings, Store, UserCog } from "lucide-react";
+import { Album, AlignStartHorizontal, BookAlert, CircleCheckBig, CircleX, Component, Info, LayoutDashboard, NotepadText, PackageSearch, Redo2, Settings, Store, UserCog } from "lucide-react";
 import { MenuItem } from "./Menu";
 
 export const menuData: MenuItem[] = [
@@ -6,7 +6,11 @@ export const menuData: MenuItem[] = [
     id: 1,
     title: "Dashboard",
     icon: <LayoutDashboard />,
-    href: "/home",
+    children: [
+      { id: 111, title: "Hướng đẫn", icon: <BookAlert />, href: "/home"  },
+      // { id: 112, title: "Order in shop", icon: <Store />, href: "/order-in-shop" },
+      // { id: 113, title: "Refund", icon: <Redo2 /> },
+    ],
   },
   {
     id: 11,
