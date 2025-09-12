@@ -35,7 +35,7 @@ export const menuData: MenuItem[] = [
     children: [
       { id: 22133, title: "Shop setting", icon: <Store />, href: "/setting/shop" },
       { id: 321123, title: "Account setting", icon: <UserCog />,  href: "/product/sale"  },
-      { id: 2323123, title: "Infomation", icon: <Info />, href: "/product/record" },
+      { id: 2323123, title: "Infomation", icon: <Info />, href: "/setting/info" },
     ],
   },
    {

@@ -16,6 +16,10 @@ export interface ApiResponse<T> {
     result: T;
 }
 
+export interface Setting {
+  connectUrl: string;
+  orderSheetId: string;
+}
 
 export interface Order {
   id: string;
