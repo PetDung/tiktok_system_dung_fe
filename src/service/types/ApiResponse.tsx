@@ -1,5 +1,10 @@
 import { ProductDetails } from "./productDetails";
 
+export interface ApiResponse<T> {
+  success: boolean;
+  message?: string;
+  data: T;
+}
 
 export interface UserData {
     id: string;
@@ -19,6 +24,7 @@ export interface ApiResponse<T> {
 export interface Setting {
   connectUrl: string;
   orderSheetId: string;
+  driverId: string;
 }
 
 export interface Order {
