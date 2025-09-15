@@ -17,7 +17,6 @@ const UserManagement = () => {
   const [selectedUser, setSelectedUser] = useState<UserData | null>(null);
   const [showUserModal, setShowUserModal] = useState(false);
   const [showResetPasswordModal, setShowResetPasswordModal] = useState(false);
-  const [roleFilter, setRoleFilter] = useState('all');
 
   useEffect(() => {
     loadUsers();
@@ -25,7 +24,7 @@ const UserManagement = () => {
 
   useEffect(() => {
     filterUsers();
-  }, [searchTerm, users, roleFilter]);
+  }, [searchTerm, users]);
 
   const loadUsers = async () => {
     try {
@@ -33,7 +32,8 @@ const UserManagement = () => {
       // Fetch users from API
       const response = await getMemberInTeam();
       setUsers(response.result || []);
-    } catch (error) {
+    } catch (error : any) {
+      alert(error.message || 'Failed to load member');
       console.error('Error loading users:', error);
     } finally {
       setLoading(false);
